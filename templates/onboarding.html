@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue - Stage & Alternance Finder</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .onboarding-container {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            padding: 50px 40px;
+            width: 100%;
+            max-width: 600px;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-icon {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            color: #555;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+            background: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            flex: 1 1 calc(50% - 5px);
+            min-width: 150px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .checkbox-item label {
+            display: inline;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .btn-start {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-start:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-start:active {
+            transform: translateY(0);
+        }
+
+        .info-box {
+            background: rgba(102, 126, 234, 0.1);
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .info-box p {
+            color: #555;
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="onboarding-container">
+        <div class="logo">
+            <div class="logo-icon">🎯</div>
+            <h1>Bienvenue!</h1>
+            <p class="subtitle">Configurons votre recherche de stage ou alternance</p>
+        </div>
+
+        <div class="info-box">
+            <p>💡 Répondez à quelques questions pour personnaliser votre recherche</p>
+        </div>
+
+        <form method="POST" action="{{ url_for('onboarding') }}">
+            <div class="form-group">
+                <label for="domain">🎓 Quel domaine vous intéresse?</label>
+                <select id="domain" name="domain" required>
+                    <option value="">-- Sélectionnez un domaine --</option>
+                    <option value="Développement Web">Développement Web</option>
+                    <option value="Développement Mobile">Développement Mobile</option>
+                    <option value="Data Science">Data Science & IA</option>
+                    <option value="Cybersécurité">Cybersécurité</option>
+                    <option value="DevOps">DevOps & Cloud</option>
+                    <option value="Design UX/UI">Design UX/UI</option>
+                    <option value="Marketing Digital">Marketing Digital</option>
+                    <option value="Gestion de Projet">Gestion de Projet</option>
+                    <option value="Autre">Autre</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="city">📍 Dans quelle ville?</label>
+                <input type="text" id="city" name="city" placeholder="Ex: Paris, Lyon, Marseille..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="job_type">💼 Type de poste recherché</label>
+                <select id="job_type" name="job_type" required>
+                    <option value="">-- Sélectionnez --</option>
+                    <option value="stage">Stage</option>
+                    <option value="alternance">Alternance</option>
+                    <option value="both">Stage ou Alternance</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="duration">⏱️ Durée souhaitée</label>
+                <select id="duration" name="duration" required>
+                    <option value="">-- Sélectionnez --</option>
+                    <option value="1-3 mois">1-3 mois</option>
+                    <option value="3-6 mois">3-6 mois</option>
+                    <option value="6-12 mois">6-12 mois</option>
+                    <option value="12+ mois">12+ mois (Alternance)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>🏢 Taille d'entreprise préférée</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="startup" name="company_size" value="startup">
+                        <label for="startup">Startup</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="pme" name="company_size" value="pme">
+                        <label for="pme">PME</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="grand_groupe" name="company_size" value="grand_groupe">
+                        <label for="grand_groupe">Grand Groupe</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="remote">🏠 Télétravail</label>
+                <select id="remote" name="remote" required>
+                    <option value="">-- Sélectionnez --</option>
+                    <option value="yes">Oui, télétravail possible</option>
+                    <option value="no">Non, présentiel uniquement</option>
+                    <option value="hybrid">Hybride (préféré)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-start">
+                🚀 Commencer la recherche
+            </button>
+        </form>
+    </div>
+</body>
+</html>

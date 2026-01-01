@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💼 Jobs - Job Hunter Bot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+        
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding-bottom: 120px; min-height: 100vh; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card { transition: transform 0.2s, box-shadow 0.2s; background: white; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+        /* Smart Navigation Menu Styles */
+        .navigation-wrapper { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; }
+        .navigation { position: relative; width: 320px; height: 70px; background: #fff; display: flex; justify-content: center; align-items: center; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
+        .navigation ul { display: flex; width: 280px; margin: 0; padding: 0; }
+        .navigation ul li { position: relative; list-style: none; width: 70px; height: 70px; z-index: 1; }
+        .navigation ul li a { position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column; width: 100%; text-align: center; font-weight: 500; text-decoration: none; }
+        .navigation ul li a .icon { position: relative; display: block; line-height: 75px; font-size: 1.5em; text-align: center; transition: 0.5s; color: #222327; }
+        .navigation ul li.active a .icon { transform: translateY(-32px); }
+        .navigation ul li a .text { position: absolute; color: #222327; font-weight: 400; font-size: 0.75em; letter-spacing: 0.05em; transition: 0.5s; opacity: 0; transform: translateY(20px); }
+        .navigation ul li.active a .text { opacity: 1; transform: translateY(10px); }
+        .indicator { position: absolute; top: -50%; width: 70px; height: 70px; background: #7a4dff; border-radius: 50%; border: 6px solid rgba(102, 126, 234, 0.3); transition: 0.5s; }
+        .indicator::before { content: ""; position: absolute; top: 50%; left: -22px; width: 20px; height: 20px; background: transparent; border-top-right-radius: 20px; box-shadow: 1px -10px 0 0 rgba(102, 126, 234, 0.3); }
+        .indicator::after { content: ""; position: absolute; top: 50%; right: -22px; width: 20px; height: 20px; background: transparent; border-top-left-radius: 20px; box-shadow: -1px -10px 0 0 rgba(102, 126, 234, 0.3); }
+        .navigation ul li:nth-child(1).active ~ .indicator { transform: translateX(calc(70px * 0)); }
+        .navigation ul li:nth-child(2).active ~ .indicator { transform: translateX(calc(70px * 1)); }
+        .navigation ul li:nth-child(3).active ~ .indicator { transform: translateX(calc(70px * 2)); }
+        .navigation ul li:nth-child(4).active ~ .indicator { transform: translateX(calc(70px * 3)); }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="gradient-bg text-white p-6 shadow-lg">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold">💼 Stages & Alternances</h1>
+                <p class="opacity-80">Parcourez vos opportunités de stage et alternance</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="text-right">
+                    <div class="font-semibold">{{ user.name }}</div>
+                    <div class="text-sm opacity-80">{{ user.role|capitalize }}</div>
+                </div>
+                <a href="{{ url_for('logout') }}" class="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition">
+                    🚪 Logout
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Smart Navigation Menu -->
+    <div class="navigation-wrapper">
+        <div class="navigation">
+            <ul>
+                <li class="list">
+                    <a href="{{ url_for('dashboard') }}">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="list active">
+                    <a href="{{ url_for('jobs') }}">
+                        <span class="icon"><ion-icon name="briefcase-outline"></ion-icon></span>
+                        <span class="text">Jobs</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="{{ url_for('profile') }}">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="text">Profile</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="{{ url_for('career_plan') }}">
+                        <span class="icon"><ion-icon name="trending-up-outline"></ion-icon></span>
+                        <span class="text">Career</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto p-6">
+        <div class="bg-white rounded-xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-6" style="color: #222327;">All Jobs ({{ jobs|length }})</h2>
+            
+            {% if jobs %}
+                <div class="space-y-4">
+                    {% for job in jobs %}
+                    <div class="border rounded-lg p-4 hover:shadow-md transition" style="border-color: tomato;">
+                        <div class="flex justify-between items-start">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold" style="color: #222327;">{{ job.title }}</h3>
+                                <p class="text-gray-600">{{ job.company }}</p>
+                                <p class="text-sm text-gray-500">📍 {{ job.location }}</p>
+                                {% if job.salary %}
+                                <p class="text-sm font-semibold mt-2" style="color: tomato;">💰 {{ job.salary }}</p>
+                                {% endif %}
+                                <p class="text-sm text-gray-600 mt-2">{{ job.description[:200] }}...</p>
+                            </div>
+                            <div class="ml-4">
+                                <span class="px-3 py-1 rounded-full text-sm font-semibold" 
+                                      style="background: rgba(255, 99, 71, 0.1); color: tomato;">
+                                    {{ job.match_score }}% Match
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <a href="{{ job.url }}" target="_blank" 
+                               class="px-4 py-2 rounded text-white font-semibold transition"
+                               style="background: tomato;"
+                               onmouseover="this.style.background='#ff6347'"
+                               onmouseout="this.style.background='tomato'">
+                                View Job →
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="text-center text-gray-500 py-12">No jobs found. Run a job search to get started!</p>
+            {% endif %}
+        </div>
+    </main>
+
+    <!-- Ion Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Smart Navigation Menu Script -->
+    <script>
+        const list = document.querySelectorAll(".list");
+        function activeLink() {
+            list.forEach((item) => item.classList.remove("active"));
+            this.classList.add("active");
+        }
+        list.forEach((item) => item.addEventListener("click", activeLink));
+    </script>
+</body>
+</html>

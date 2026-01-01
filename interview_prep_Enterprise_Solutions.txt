@@ -1,0 +1,102 @@
+======================================================================
+INTERVIEW PREPARATION GUIDE
+======================================================================
+
+📊 COMPANY RESEARCH
+----------------------------------------------------------------------
+  About: Research Enterprise Solutions on their website and LinkedIn
+  Mission: Check company mission statement
+  Values: Review company values and culture
+  Recent_News: Search for recent news articles
+  Products: Understand their main products/services
+  Competitors: Know their main competitors
+  Size: Company size and locations
+  Leadership: Key executives and leadership team
+  Scraped_Info: Visit Enterprise Solutions's website for detailed information
+
+❓ COMMON INTERVIEW QUESTIONS
+----------------------------------------------------------------------
+
+  BEHAVIORAL:
+    1. Tell me about yourself
+    2. What are your greatest strengths?
+    3. What are your weaknesses?
+    4. Why do you want to work here?
+    5. Where do you see yourself in 5 years?
+
+  TECHNICAL:
+    1. Explain your most complex project
+    2. How do you approach problem-solving?
+    3. What's your development process?
+    4. How do you ensure code quality?
+    5. Describe your experience with [technology]
+
+  SITUATIONAL:
+    1. How would you handle a tight deadline?
+    2. What would you do if you disagreed with your manager?
+    3. How do you prioritize tasks?
+    4. How would you handle an underperforming team member?
+    5. What would you do if you made a mistake?
+
+  COMPANY SPECIFIC:
+    1. Why do you want to work at [Company]?
+    2. What do you know about our company?
+    3. How would you contribute to our team?
+    4. What interests you about this role?
+    5. How do your values align with ours?
+
+  ROLE SPECIFIC:
+    1. Explain your experience with Backend Developer
+    2. What's your approach to code reviews?
+    3. How do you handle production issues?
+    4. Describe your ideal development environment
+
+🤔 QUESTIONS TO ASK THE INTERVIEWER
+----------------------------------------------------------------------
+  1. What does success look like in this Backend Developer after 6 months?
+  2. What are the biggest challenges facing the team right now?
+  3. How does this role contribute to the company's goals?
+  4. What's the team structure and who would I be working with?
+  5. What opportunities are there for professional development?
+  6. What do you enjoy most about working at Enterprise Solutions?
+  7. What's the onboarding process like?
+  8. How do you measure performance in this role?
+  9. What's the company culture like?
+  10. What are the next steps in the interview process?
+
+💡 INTERVIEW TIPS
+----------------------------------------------------------------------
+  • Research the company thoroughly before the interview
+  • Prepare 2-3 examples for each common question using STAR method
+  • Dress professionally and arrive 10 minutes early
+  • Bring copies of your resume and a notepad
+  • Practice your answers out loud beforehand
+  • Prepare thoughtful questions to ask the interviewer
+  • Follow up with a thank-you email within 24 hours
+  • Be ready to discuss your salary expectations
+  • Show enthusiasm and genuine interest in the role
+  • Turn off your phone before the interview
+  • Be prepared for technical questions or coding challenges
+  • Review fundamental concepts in your tech stack
+  • Bring a portfolio or examples of your work
+
+📧 THANK-YOU EMAIL TEMPLATE
+----------------------------------------------------------------------
+Subject: Thank you - Backend Developer Interview
+
+Dear [Interviewer Name],
+
+Thank you for taking the time to meet with me today to discuss the Backend Developer role at Enterprise Solutions. I enjoyed learning more about the team and the exciting projects you're working on.
+
+Our conversation reinforced my enthusiasm for this opportunity. I'm particularly excited about [specific aspect discussed in interview], and I believe my experience with [relevant skill/experience] would allow me to contribute meaningfully to your team.
+
+Please don't hesitate to reach out if you need any additional information. I look forward to hearing about the next steps in the process.
+
+Thank you again for your time and consideration.
+
+Best regards,
+[Your Name]
+
+======================================================================
+Good luck with your interview! 🍀
+======================================================================

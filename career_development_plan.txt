@@ -1,0 +1,108 @@
+======================================================================
+CAREER DEVELOPMENT PLAN
+======================================================================
+
+📍 CURRENT STATE
+----------------------------------------------------------------------
+  Role: Mid-Level Developer
+  Skills: Python, Django, SQL
+  Date: 2026-01-01
+
+🎯 TARGET STATE
+----------------------------------------------------------------------
+  Role: Senior Software Architect
+  Timeline: 5 years
+
+🗺️  PROGRESSION PATH
+----------------------------------------------------------------------
+  1. Mid-Level Developer (0 years)
+     Focus: Master current role
+  2. Senior Software Architect (3-5 years)
+     Focus: Achieve target role
+
+📚 SKILL GAPS TO ADDRESS
+----------------------------------------------------------------------
+  • System Design (High priority) - Technical
+  • Architecture (High priority) - Technical
+  • Mentoring (High priority) - General
+  • Code Review (Medium priority) - General
+  • Technical Leadership (Medium priority) - Technical
+  • System Architecture (Medium priority) - Technical
+  • Technology Strategy (Medium priority) - General
+  • Cross-team Collaboration (Medium priority) - Leadership
+  • Documentation (Medium priority) - General
+
+🎯 KEY MILESTONES
+----------------------------------------------------------------------
+
+  6 months (2026-06-30):
+    • Master 2-3 new technical skills
+    • Complete relevant certification
+    • Take on stretch project
+
+  12 months (2026-12-27):
+    • Master 2-3 new technical skills
+    • Complete relevant certification
+    • Take on stretch project
+
+  18 months (2027-06-25):
+    • Lead a small project
+    • Mentor junior team member
+    • Contribute to architecture decisions
+
+  24 months (2027-12-22):
+    • Lead a small project
+    • Mentor junior team member
+    • Contribute to architecture decisions
+
+📖 LEARNING RESOURCES
+----------------------------------------------------------------------
+
+  Online Courses:
+    • Coursera - System Design
+    • Udemy - Advanced Programming
+    • LinkedIn Learning - Leadership Skills
+
+  Certifications:
+    • AWS Certified Solutions Architect
+    • Google Cloud Professional
+    • Certified Scrum Master
+
+  Books:
+    • Designing Data-Intensive Applications
+    • The Manager's Path
+    • Clean Architecture
+
+  Communities:
+    • Local tech meetups
+    • Online developer communities
+    • Professional associations
+
+✅ IMMEDIATE ACTION ITEMS
+----------------------------------------------------------------------
+
+  Identify skill gaps (High priority)
+    Timeframe: This week
+    Compare current skills with target role requirements
+
+  Create learning plan (High priority)
+    Timeframe: This month
+    Select courses and resources to address skill gaps
+
+  Seek mentorship (Medium priority)
+    Timeframe: This month
+    Find someone in target role to mentor you
+
+  Take on stretch project (High priority)
+    Timeframe: Next quarter
+    Volunteer for project requiring target role skills
+
+  Build portfolio (Medium priority)
+    Timeframe: Ongoing
+    Document achievements and projects
+
+  Network actively (Medium priority)
+    Timeframe: Ongoing
+    Attend industry events and connect with peers
+
+======================================================================

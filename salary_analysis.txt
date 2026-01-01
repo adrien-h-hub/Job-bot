@@ -1,0 +1,94 @@
+======================================================================
+SALARY NEGOTIATION ANALYSIS
+======================================================================
+
+💰 OFFER ANALYSIS
+----------------------------------------------------------------------
+  Offered Amount: €55,000
+  Market Percentile: 50th
+  Assessment: Good offer - at market rate
+
+📊 MARKET DATA
+----------------------------------------------------------------------
+  Market Range: €45,000 - €85,000
+  Market Median: €60,000
+  25th Percentile: €51,749
+  75th Percentile: €72,250
+
+🎯 RECOMMENDED COUNTER OFFER
+----------------------------------------------------------------------
+  Suggested Amount: €63,249
+  Minimum Acceptable: €60,000
+  Negotiation Range: €60,000 - €63,249
+  Strategy: Moderate gap - highlight specific skills and achievements.
+
+💪 YOUR LEVERAGE POINTS
+----------------------------------------------------------------------
+  • Current market demand for this role
+  • Multiple opportunities (if true)
+  • Unique combination of skills and experience
+
+📋 TOTAL COMPENSATION FACTORS
+----------------------------------------------------------------------
+  • Base Salary
+  • Annual Bonus (% of base)
+  • Signing Bonus
+  • Stock Options/Equity
+  • Health Insurance Coverage
+  • Retirement Contributions (401k, pension)
+  • Vacation Days
+  • Remote Work Flexibility
+  • Professional Development Budget
+  • Gym/Wellness Benefits
+
+💬 NEGOTIATION SCRIPT
+----------------------------------------------------------------------
+SALARY NEGOTIATION SCRIPT
+
+Opening (Express Gratitude):
+"Thank you so much for the offer. I'm very excited about the opportunity to join the team as a Senior Python Developer."
+
+State Your Case:
+"I've done some research on market rates for this role, and based on my experience and the value I can bring, I was hoping we could discuss the compensation."
+
+Make Your Counter:
+"Based on my research and the scope of responsibilities, I was thinking more in the range of €63,249. Is there flexibility in the budget?"
+
+Justify Your Ask:
+"This is based on:
+- Market data for Senior Python Developer in Paris, France
+- My relevant experience
+- The additional value I bring through my specialized skills"
+
+If They Can't Meet Your Number:
+"I understand budget constraints. Are there other aspects of the compensation package we could discuss? Such as:
+- Signing bonus
+- Performance bonus structure
+- Additional vacation days
+- Professional development budget
+- Remote work flexibility
+- Earlier salary review"
+
+Closing:
+"I'm very interested in this role and I'm confident we can find a number that works for both of us. What are your thoughts?"
+
+REMEMBER:
+- Stay positive and collaborative
+- Don't accept immediately - ask for time to consider
+- Get everything in writing
+- Be prepared to walk away if needed
+
+💡 NEGOTIATION TIPS
+----------------------------------------------------------------------
+  • Never accept the first offer immediately
+  • Let them make the first number
+  • Always negotiate - most offers have 10-20% flexibility
+  • Use market data to support your ask
+  • Focus on value, not need
+  • Be prepared to walk away
+  • Get everything in writing
+  • Consider total compensation, not just salary
+  • Ask for time to review the offer
+  • Practice your negotiation conversation
+
+======================================================================
